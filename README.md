@@ -26,7 +26,7 @@ curl -s https://raw.githubusercontent.com/rowanmanning/makefiles/master/Makefile
 Now create a `Makefile` in the same directory and add the following to the top:
 
 ```make
-include n.Makefile
+include Makefile.node
 ```
 
 This allows you to extend the provided tasks without worrying about your changes being overwritten when you update. Update to the latest version of `Makefile.node`:
