@@ -21,6 +21,8 @@
 NPM_BIN = ./node_modules/.bin
 export PATH := $(NPM_BIN):$(PATH)
 export EXPECTED_COVERAGE := 90
+export INTEGRATION_TIMEOUT := 5000
+export INTEGRATION_SLOW := 4000
 
 
 # Output helpers
@@ -104,7 +106,7 @@ test-unit-coverage:
 	fi
 
 test-integration:
-	@if [ -d test/integration ]; then mocha test/integration && $(TASK_DONE); fi
+	@if [ -d test/integration ]; then mocha test/integration --timeout $(INTEGRATION_TIMEOUT) --slow $(INTEGRATION_SLOW) && $(TASK_DONE); fi
 
 
 # Tooling tasks
