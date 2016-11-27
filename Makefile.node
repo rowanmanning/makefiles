@@ -28,9 +28,7 @@ export INTEGRATION_SLOW := 4000
 # Output helpers
 # --------------
 
-C_GREEN=\x1b[32;01m
-C_RESET=\x1b[0m
-TASK_DONE = echo "$(C_GREEN)✓ $@ done$(C_RESET)"
+TASK_DONE = echo "✓ $@ done"
 
 
 # Group tasks
