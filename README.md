@@ -57,13 +57,13 @@ make update-makefile
 
   * `verify-spaces`: If an `.editorconfig` file is present in the project root and the [`lintspaces-cli`][lintspaces-cli] module is installed, run [Lintspaces] against the code.
 
-  * `verify-coverage`: If a `coverage/lcov-report` folder is present in the project root and the [`istanbul`][istanbul] module is installed, check that coverage is above `90%`. This is configurable by specifying `export EXPECTED_COVERAGE := <value>` in your dependant Makefile.
+  * `verify-coverage`: If a `coverage/lcov-report` folder is present in the project root and the [`nyc`][nyc] or [`istanbul`][istanbul] module is installed, check that coverage is above `90%`. This is configurable by specifying `export EXPECTED_COVERAGE := <value>` in your dependant Makefile.
 
   * `test`: Run the `test-unit-coverage`, `verify-coverage`, and `test-integration` tasks.
 
   * `test-unit`: If a `test/unit` folder is present in the project root, run [Mocha] recursively on it.
 
-  * `test-unit-coverage`: If a `test/unit` folder is present in the project root and the [`istanbul`][istanbul] module is installed, run [Mocha] recursively on it with coverage reporting. If `instanbul` is _not_ present, fall back to `make test-unit`.
+  * `test-unit-coverage`: If a `test/unit` folder is present in the project root and the [`nyc`][nyc] or [`istanbul`][istanbul] module is installed, run [Mocha] recursively on it with coverage reporting. If `instanbul` is _not_ present, fall back to `make test-unit`.
 
   * `test-integration`: If a `test/integration` folder is present in the project root, run [Mocha] non-recursively on it.
 
@@ -100,3 +100,4 @@ Copyright &copy; 2016, Rowan Manning
 [lintspaces-cli]: https://github.com/evanshortiss/lintspaces-cli
 [istanbul]: https://github.com/gotwarlost/istanbul
 [mocha]: https://mochajs.org/
+[nyc]: https://github.com/istanbuljs/nyc
