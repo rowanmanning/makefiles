@@ -2,6 +2,8 @@
 Makefiles
 =========
 
+**:warning: This project is no longer being maintained. It has been superceded by [rowanmanning/make](https://github.com/rowanmanning/make) :warning:**
+
 Makefiles for use in various open source projects. Each Makefile provides a bunch of useful tasks which can be included in the Makefiles of your own projects. Heavily inspired by [n-makefile].
 
 [![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](#license)
